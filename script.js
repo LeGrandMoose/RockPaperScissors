@@ -18,7 +18,7 @@ function playRound(playerSelection, computerSelection) {
             return('The player prevails')
         }
     }
-    else if (playerSelection.toLowerCase() == 'scissorcs'){
+    else if (playerSelection.toLowerCase() == 'scissors'){
         if (computerSelection.toLowerCase() == 'rock'){
             return('The computer prevails')
         }
@@ -29,12 +29,24 @@ function playRound(playerSelection, computerSelection) {
 
 }   
 
-const playerSelection = 'Rock';
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection,computerSelection));
+function playGame(){
+    const playerSelection = 'paper';
+    const computerSelection = getComputerChoice();
+
+    console.log(playRound(playerSelection,computerSelection))
+    
+
+}
+
+playGame()
+playGame()
+
+
 
 function getComputerChoice(){
-    let choices = ['rock','paper,scissors'] ;
-    let index = Math.floor(math.random() * 4);
+    let choices = ['rock','paper','scissors'] ;
+    let index = Math.floor(Math.random() * 3);
+    console.log(index)
     return (choices[index])
+    
 }
