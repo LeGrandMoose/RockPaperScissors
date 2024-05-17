@@ -38,8 +38,7 @@ function playGame(){
 
 }
 
-playGame()
-playGame()
+
 
 
 
@@ -47,6 +46,15 @@ function getComputerChoice(){
     let choices = ['rock','paper','scissors'] ;
     let index = Math.floor(Math.random() * 3);
     console.log(index)
-    return (choices[index])
-    
+    return (choices[index])   
 }
+
+const buttons = document.querySelectorAll('button');
+
+
+buttons.forEach((button) => {
+
+    button.addEventListener('click', () => {
+        myValue = (playRound(button.value,getComputerChoice()))
+    });
+});
