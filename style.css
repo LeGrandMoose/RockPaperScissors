@@ -8,13 +8,17 @@ body {
     width: 100px;
     height: 100px;
   }
+
+  ul {
+    list-style-type: none;
+  }
   
   .title {
     font-size: 36px;
     font-weight: 900;
   
     
-    margin-bottom: 32px;
+    margin: 50px;
   }
   
   .options {
@@ -28,3 +32,16 @@ body {
     flex-basis: 200px;
   
   }
+
+  .infoResult {
+
+    flex-basis: 100px;
+  }
+
+  .results {
+    display: flex;
+    justify-content: center;
+    padding:100px;
+  }
+  
+  
